@@ -1,0 +1,78 @@
+.box{
+    background:  black;
+    width: 800px ;
+    height: 750px;
+    margin-left : 400px ;
+}
+.box1 {
+    float:  left;
+    background: aquamarine;
+    width:40% ;
+    height:780px;
+
+
+
+}
+.box1 h1 {
+    text-align: center;
+}
+.box1 h5 {
+    text-align: center;
+}
+.box1 img {
+    display: block; margin-left: auto; margin-right: auto;
+}
+
+.box1 i{
+    display: block;
+    margin-left:50px;
+
+
+}
+.box1 h3 {
+    text-align: center;
+    background: white;
+    border-radius: 50px 50px;
+}
+.box1 .ok{
+
+    padding-left: 160px;
+
+}
+.box2 {
+    float:  right;
+    background: wheat;
+    width:60% ;
+    height:780px;
+}
+.box2 h2{
+    text-align: center;
+    background: cornflowerblue;
+    border-radius: 50px 50px;
+}
+.hocvan{
+    width:40% ;
+    height: 50px;
+    float:  right;
+
+
+}
+.thoigian{
+    width:60% ;
+    height: 50px;
+    float:  left;
+
+}
+.vieclam{
+    width:40% ;
+    height: 50px;
+    float:  right;
+
+
+}
+.kinhnghiem{
+    width:60% ;
+    height: 50px;
+    float:  left;
+
+}
