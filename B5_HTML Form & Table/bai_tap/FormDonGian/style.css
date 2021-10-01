@@ -1,0 +1,190 @@
+.box{
+    background: aquamarine;
+    width: 1500px;
+    height: 590px;
+}
+.box h1 {
+    text-align: center;
+    border-radius: 50px 20px;
+    background: orange;
+}
+.box1{
+    background: white;
+    width: 1400px;
+    height: 490px;
+    margin-left: 50px;
+
+}
+.hovaten1{
+    color:  blue;
+
+    margin: 10px 200px;
+    margin-top: 20px;
+    font-size:30px;
+
+}
+.hovaten{
+    width: 50%;
+    padding: 12px 20px;
+    margin-top: 30px;
+    display: inline-block;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size:30px;
+}
+.email1{
+    color:  blue;
+
+    margin: 10px 270px;
+    font-size:30px;
+
+
+
+}
+.email{
+    width: 30%;
+    padding: 12px 20px;
+
+    display: inline-block;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size:30px;
+}
+.sothich{
+
+    margin: 10px 190px;
+    display: inline-block;
+    position:relative;
+    cursor:pointer;
+    font-size:30px;
+    user-select: none;
+    padding-left:40px;
+    margin-bottom:10px;
+
+}
+.container1{
+    margin-left: 30px;
+}
+.container2{
+    margin-left: 180px;
+}
+.button {
+
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    cursor: pointer;
+
+}
+.button2 {
+    background-color: #e7e7e7;
+    color: black;
+    margin-left: 380px;
+}
+.form2{
+    background: yellowgreen;
+    width: 750px;
+    height: 590px;
+}
+.form2 h1 {
+    text-align: center;
+    border-radius: 50px 20px;
+    background: blue;
+
+}
+.Name{
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 40px;
+}
+.TextName{
+    color:  blue;
+
+    margin-left: 45px;
+    margin-top: 20px;
+    font-size:20px;
+
+}
+.Date{
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 40px;
+}
+.Date1{
+    color:  blue;
+
+
+    margin-left: 40px;
+    margin-top: 20px;
+    font-size:20px;
+}
+.GenDer1{
+    color:  blue;
+    margin-left:80px;
+
+    font-size:20px;
+}
+.GenDer{
+    color:  blue;
+    margin-left:40px;
+
+    font-size:20px;
+}
+.Class{
+    color:  blue;
+    margin-left:45px;
+
+    font-size:20px;
+}
+.select{
+    margin-left:115px;
+
+}
+.Email23{
+    color:  blue;
+    margin-left:40px;
+    font-size:20px;
+}
+.Email234{
+    margin-left:40px;
+}
+.Email234{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 80px;
+}
+.button3 {
+    background-color: black;
+}
+.button{
+    margin-left:200px;
+
+}
+
+.button1{
+    margin-left:20px;
+    background-color: black;
+}

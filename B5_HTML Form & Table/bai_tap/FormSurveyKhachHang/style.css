@@ -1,0 +1,23 @@
+.box1 {
+    border-style: inset;
+
+}
+.select{
+    width: 1000px;
+}
+.table{
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+.table tr th{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.table tr td{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
