@@ -1,0 +1,25 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin-left: 400px;
+}
+
+td, th {
+    border: 5px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+h1{
+    text-align: center;
+}
+.tr1{
+    background: yellow;
+}
+.kb3 {
+    margin-left: 300px;
+}
+.kb2 {
+    margin-left: 450px;
+}

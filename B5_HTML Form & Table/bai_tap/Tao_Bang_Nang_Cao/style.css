@@ -1,0 +1,45 @@
+table {
+
+    width: 70%;
+ margin-left: 100px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 5px solid ;
+    text-align: left;
+    padding: 8px;
+
+}
+.col1{
+    background: white;
+    width: 70px;
+    height: 70px;
+
+}
+.col2{
+    background: black;
+    width: 70px;
+    height: 70px;
+}
+.ok{
+    background: orange;
+    width: 900px;
+    height: 700px;
+
+}
+
+.tb2 {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+.tb2 td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+
