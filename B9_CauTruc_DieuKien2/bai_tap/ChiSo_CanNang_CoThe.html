@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    let inPutweight ;
+    let inPutheight  ;
+    inPutweight = prompt("Mời nhập cân nặng : ");
+    inPutheight = prompt("Mời nhập chiều cao : ");
+
+   let weight = parseInt(inPutweight);
+    let height = parseInt(inPutheight);
+
+    let bmi = weight /(Math.pow(height, 2));
+    if (bmi <18 ){
+        document.write("Underweight");
+    }
+    else if (bmi < 25.0)
+        document.write("Normal");
+    else if (bmi < 30.0)
+        document.write("Overweight");
+    else
+        document.write("Obese");
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

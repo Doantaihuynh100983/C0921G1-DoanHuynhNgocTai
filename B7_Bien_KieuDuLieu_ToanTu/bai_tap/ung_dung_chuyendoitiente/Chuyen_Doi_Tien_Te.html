@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form >
+    <label >Amount</label>
+    <input type="text" id="fname" name="fname" ><br><br>
+
+    <label>From Currency</label>
+
+    <select id="SelectOne" >
+
+        <option value="USA">USA</option>
+        <option value="VIETNAM">VIỆT NAM</option>
+    </select>
+    <br><br>
+    <label>To Currency</label>
+    <select id="SelectTwo">
+
+        <option value="VIETNAM">Việt Nam</option>
+        <option value="USA">USA</option>
+    </select>
+    <br><br>
+    <input  id = "demo" type="submit" value="Quy ĐỔI" onclick="myFunction()">
+</form>
+<script !src="">
+            function myFunction() {
+                let giatrivao = document.getElementById('fname').value;
+                let Select1 = document.getElementById('SelectOne').value;
+                let Select2 = document.getElementById('SelectTwo').value;
+                if (Select1 == Select2){
+                    alert(giatrivao);
+                }
+                if (Select1 == 'VIETNAM' && Select2 =="USA"){
+                        alert(giatrivao/24000);
+                }
+                if (Select1 == 'USA' && Select2 =="VIETNAM"){
+                    alert(giatrivao*24000);
+                }
+            }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    let inputDiemBaiKiemTra = prompt("Mời bạn nhập số điểm bài kiểm tra ")
+    let inputDiemThiGiuaKi = prompt("Mời bạn nhập số điểm thi giữa kỳ ")
+    let inputDiemThiCuoiKi = prompt("Mời bạn nhập số điểm thi cuối kỳ ")
+    let DiemBaiKiemTra = parseInt(inputDiemBaiKiemTra);
+    let DiemThiGiuaKi = parseInt(inputDiemThiGiuaKi);
+    let DiemThiCuoiKi = parseInt(inputDiemThiCuoiKi);
+    let Dtb = (DiemBaiKiemTra +DiemThiGiuaKi+DiemThiCuoiKi)/3
+    if (Dtb >= 9){
+        document.write(" Loại A");
+    }else if (9 < Dtb >= 7){
+        document.write(" Loại B");
+    }else if ( 7 < Dtb >= 5){
+        document.write(" Loại C");
+    }else {
+        document.write(" Loại F");
+    }
+</script>
+</body>
+</html>

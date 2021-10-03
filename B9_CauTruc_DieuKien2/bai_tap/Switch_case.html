@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form >
+
+    <input type="text"  name="fname" id = "nhapdulieu"><br><br>
+
+    <input type="submit" value="Tính Số Ngày" onclick="SoNgay()">
+</form>
+<script !src="">
+    function SoNgay() {
+            let month = document.getElementById("nhapdulieu").value;
+                inputMonth = parseInt(month);
+
+        switch (inputMonth) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.write(" Tháng Có 31 Ngày");
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.write(" Tháng Có 30 Ngày");
+                break;
+                case 2 : document.write("Tháng có 28 Hoặc 29 ngày");
+                    break;
+            default: document.write (" xin loi khong co thang do");
+                break;
+        }
+    }
+</script>
+</body>
+</html>
