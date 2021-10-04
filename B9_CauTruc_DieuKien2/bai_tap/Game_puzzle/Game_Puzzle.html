@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="text-align: center">
+    <img src="img/gau1.jpg" src="img/meo1.jpg" width="500" src="img/khi1.jpg" height="200" id="imgClickAndChange"
+         onclick="changeImage()" style="border-radius: 25px;">
+    <br>
+
+
+    <img src="img/gau2.jpg" src="img/meo2.jpg" width="500" src="img/khi2.jpg" height="200" id="imgClickAndChangeTwo"
+         onclick="changeImageTwo()" style="border-radius: 25px;">
+    <br>
+
+
+    <img src="img/gau3.jpg" src="img/meo3.jpg" width="500" src="img/khi3.jpg" height="200" id="imgClickAndChangeThree"
+         onclick="changeImageThree()" style="border-radius: 25px;">
+    <br>
+
+
+    <img src="img/gau4.jpg" src="img/meo4.jpg" width="500" src="img/khi4.jpg" height="200" id="imgClickAndChangeFour"
+         onclick="changeImageFour()" style="border-radius: 25px;">
+    <br>
+
+    <img src="img/gau5.jpg" src="img/meo5.jpg" width="500" src="img/khi5.jpg" height="200" id="imgClickAndChangefive"
+         onclick="changeImagefive()" style="border-radius: 25px;">
+
+</div>
+
+</body>
+
+<script !src="">
+    function changeImage() {
+        // alert(document.getElementById("imgClickAndChange").getAttribute('src'));
+        if (document.getElementById("imgClickAndChange").getAttribute('src') === "img/gau1.jpg") {
+            document.getElementById("imgClickAndChange").src = "img/meo1.jpg";
+        } else if (document.getElementById("imgClickAndChange").getAttribute('src') === "img/meo1.jpg") {
+            document.getElementById("imgClickAndChange").src = "img/khi1.jpg";
+        } else if (document.getElementById("imgClickAndChange").getAttribute('src') === "img/khi1.jpg") {
+            document.getElementById("imgClickAndChange").src = "img/gau1.jpg";
+        }
+    }
+
+    function changeImageTwo() {
+        // alert(document.getElementById("imgClickAndChangeTwo").getAttribute('src'));
+        if (document.getElementById("imgClickAndChangeTwo").getAttribute('src') === "img/gau2.jpg") {
+            document.getElementById("imgClickAndChangeTwo").src = "img/meo2.jpg";
+        } else if (document.getElementById("imgClickAndChangeTwo").getAttribute('src') === "img/meo2.jpg") {
+            document.getElementById("imgClickAndChangeTwo").src = "img/khi2.jpg";
+        } else if (document.getElementById("imgClickAndChangeTwo").getAttribute('src') === "img/khi2.jpg") {
+            document.getElementById("imgClickAndChangeTwo").src = "img/gau2.jpg";
+        }
+    }
+
+    function changeImageThree() {
+        // alert(document.getElementById("imgClickAndChangeThree").getAttribute('src'));
+        if (document.getElementById("imgClickAndChangeThree").getAttribute('src') === "img/gau3.jpg") {
+            document.getElementById("imgClickAndChangeThree").src = "img/meo3.jpg";
+        } else if (document.getElementById("imgClickAndChangeThree").getAttribute('src') === "img/meo3.jpg") {
+            document.getElementById("imgClickAndChangeThree").src = "img/khi3.jpg";
+        } else if (document.getElementById("imgClickAndChangeThree").getAttribute('src') === "img/khi3.jpg") {
+            document.getElementById("imgClickAndChangeThree").src = "img/gau3.jpg";
+        }
+    }
+
+    function changeImageFour() {
+        // alert(document.getElementById("imgClickAndChangeThree").getAttribute('src'));
+        if (document.getElementById("imgClickAndChangeFour").getAttribute('src') === "img/gau4.jpg") {
+            document.getElementById("imgClickAndChangeFour").src = "img/meo4.jpg";
+        } else if (document.getElementById("imgClickAndChangeFour").getAttribute('src') === "img/meo4.jpg") {
+            document.getElementById("imgClickAndChangeFour").src = "img/khi4.jpg";
+        } else if (document.getElementById("imgClickAndChangeFour").getAttribute('src') === "img/khi4.jpg") {
+            document.getElementById("imgClickAndChangeFour").src = "img/gau4.jpg";
+        }
+    }
+
+    function changeImagefive() {
+        // alert(document.getElementById("imgClickAndChangeThree").getAttribute('src'));
+        if (document.getElementById("imgClickAndChangefive").getAttribute('src') === "img/gau5.jpg") {
+            document.getElementById("imgClickAndChangefive").src = "img/meo5.jpg";
+        } else if (document.getElementById("imgClickAndChangefive").getAttribute('src') === "img/meo5.jpg") {
+            document.getElementById("imgClickAndChangefive").src = "img/khi5.jpg";
+        } else if (document.getElementById("imgClickAndChangefive").getAttribute('src') === "img/khi5.jpg") {
+            document.getElementById("imgClickAndChangefive").src = "img/gau5.jpg";
+        }
+
+
+    }
+
+
+</script>
+</html>

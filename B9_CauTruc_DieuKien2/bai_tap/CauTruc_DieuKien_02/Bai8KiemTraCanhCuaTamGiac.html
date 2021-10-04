@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    let inputA = prompt('Mời bạn nhập a :');
+    let inputB = prompt('Mời bạn nhập b :');
+    let inputC = prompt('Mời bạn nhập c :');
+        let a = parseInt(inputA);
+    let b = parseInt(inputB);
+    let c = parseInt(inputC);
+
+    if( a<b+c && b<a+c && c<a+b ){
+        document.write("Đây là tam giác ");
+        document.write('<br/>');
+        //điều kiện tam giác vuông (định lý pitago)
+        if( a*a===b*b+c*c || b*b===a*a+c*c || c*c=== a*a+b*b)
+            document.write("Đây là tam giác vuông");
+        //điều kiện tam giác đều là 3 cạnh bằng nhau
+        else if(a===b && b===c)
+            document.write("Đây là tam giác đều");
+        //điều kiện tam giác cân là 2 cạnh bằng nhau
+        else if(a===b || a===c || b===c)
+            document.write("Đây là tam giác cân");
+        //điều kiện tam giác tù là có một góc lơn hơn 90 độ
+        else if(a*a > b*b+c*c || b*b > a*a+c*c || c*c > a*a+b*b)
+            document.write("Đây là tam giác tù");
+        //và trường hợp còn lại là tam giác nhọn
+        else
+            document.write("Đây là tam giác nhọn");
+    }
+    //điều kiện ba cạnh nhập vào không phải là ba cạnh của một tam giác
+    else
+        document.write("Ba cạnh a, b, c không phải là ba cạnh của một tam giác");
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+        let inputA = prompt("Mời nhập số a ");
+        let inputB = prompt("Mời nhập số b ");
+        let a = parseInt(inputA);
+        let b = parseInt(inputB);
+
+        if (a == 0) {
+            if (b == 0) {
+                document.write("Phương trình này có vô số nghiệm.");
+            } else {
+                document.write("Phương trình vô nghiệm.");
+            }
+        }else {
+            document.write("Phương trình có một nghiệm" +(-b/a));
+        }
+</script>
+</body>
+</html>
