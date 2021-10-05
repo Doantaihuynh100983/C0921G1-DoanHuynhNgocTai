@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+
+    let inputluong , sothue , luongthucnhan  ;
+    inputluong  = prompt("Mời bạn nhập số lương đã nhận ");
+    let luong = parseInt(inputluong);
+
+
+        if (  luong >= 4){
+        sothue = luong*5/100;
+
+    }
+
+   else if ( luong>=9){
+        sothue = luong*10/100;
+
+    }
+    else  if ( luong >=14){
+        sothue = luong*15/100;
+
+    }
+    else if ( luong >=24){
+        sothue = luong*20/100;
+
+    }
+    else if (luong >=44){
+        sothue = luong*25/100;
+
+    }
+    else{
+        sothue = luong*30/100;
+
+   }
+
+
+    luongthucnhan = luong - sothue ;
+    document.write("Số Lương Bạn Đã Nhận Trong Tháng Này = "+luong);
+    document.write('<br/>');
+    document.write("Giá Trị Thuế Bạn Phải Đóng = " +sothue );
+    document.write('<br/>');
+    document.write("Lương Thực Nhận Của BẠn = " +luongthucnhan);
+</script>
+</body>
+</html>

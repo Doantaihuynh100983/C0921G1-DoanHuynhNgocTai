@@ -31,13 +31,13 @@
                 let giatrivao = document.getElementById('fname').value;
                 let Select1 = document.getElementById('SelectOne').value;
                 let Select2 = document.getElementById('SelectTwo').value;
-                if (Select1 == Select2){
+                if (Select1 === Select2){
                     document.write(giatrivao);
                 }
-                if (Select1 == 'VIETNAM' && Select2 =="USA"){
+                if (Select1 === 'VIETNAM' && Select2 ==="USA"){
                     document.write(giatrivao/24000);
                 }
-                if (Select1 == 'USA' && Select2 =="VIETNAM"){
+                if (Select1 === 'USA' && Select2 ==="VIETNAM"){
                     document.write(giatrivao*24000);
                 }
             }

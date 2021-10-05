@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+
+    let inputsodien = prompt("Mời Bạn Nhập Số Điện ĐÃ SỬ DỤNG ");
+    let sodien = parseInt(inputsodien);
+    let tien = 0 ;
+    if ( sodien <= 50){
+        tien = sodien * 1678;
+    } else if ( 50 <  sodien <=100){
+        tien = sodien * 1678 + (sodien - 50)* 1734;
+    }else if (100 < sodien <=200){
+        tien = sodien * 1678 + sodien * 1734 + (sodien - 100)*2014;
+    }else if (200< sodien <=300){
+        tien = sodien * 1678 + sodien * 1734 + sodien * 2014 + (sodien - 200)*2536;
+    }
+    else if (300 < sodien <=400){
+        tien = sodien * 1678 + sodien * 1734 + sodien * 2014 +  + sodien * 2536 +(sodien - 300)*2834;
+    }else  {
+        tien = sodien * 1678 + sodien * 1734 + sodien * 2014 +  + sodien * 2536 + + sodien * 2834 +(sodien - 400)*2927;
+    }
+        document.write("Số Điện bẠn Đã dùng = " + sodien);
+             document.write('<br/>');
+             document.write("Số Tiền  bẠn phải trả bằng = " + tien);
+</script>
+</body>
+</html>
