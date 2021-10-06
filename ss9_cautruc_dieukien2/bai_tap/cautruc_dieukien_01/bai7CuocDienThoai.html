@@ -11,21 +11,21 @@
 </head>
 <body>
 <script !src="">
-    let   inputsophut ,tong ;
+    let   inputSoPhut ,tong ;
     let  phi=0;
-    let  phicodinh=25;
-    inputsophut = prompt("Mời bạn Nhập số phút đã gọi :");
-    let sophut = parseInt(inputsophut);
-    if(sophut>200){
-        phi=(sophut-200)*200+150*400+50*600;
+    let  phiCoDinh=25;
+    inputSoPhut = prompt("Mời bạn Nhập số phút đã gọi :");
+    let soPhut = parseInt(inputSoPhut);
+    if(soPhut>200){
+        phi=(soPhut-200)*200+150*400+50*600;
     }
-    else if(sophut>50) {
-        phi=(sophut-50)*400+50*600;}
+    else if(soPhut>50) {
+        phi=(soPhut-50)*400+50*600;}
     else{
-        phi=sophut*600;
-    tong=0.01*phi+phicodinh;
+        phi=soPhut*600;
+    tong=0.01*phi+phiCoDinh;
     }
-        document.write("Bạn Đã gọi" +sophut + "phút" );
+        document.write("Bạn Đã gọi" +soPhut + "phút" );
         document.write('<br/>');
         document.write("Số Tiền Bạn Phải Nộp Là :" +tong);
 

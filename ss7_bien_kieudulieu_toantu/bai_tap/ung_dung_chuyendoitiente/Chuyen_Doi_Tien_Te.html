@@ -24,21 +24,22 @@
         <option value="USA">USA</option>
     </select>
     <br><br>
+
     <input  id = "demo" type="submit" value="Quy ĐỔI" onclick="myFunction()">
 </form>
 <script !src="">
             function myFunction() {
-                let giatrivao = document.getElementById('fname').value;
-                let Select1 = document.getElementById('SelectOne').value;
-                let Select2 = document.getElementById('SelectTwo').value;
-                if (Select1 === Select2){
-                    document.write(giatrivao);
+                let giaTriVao = document.getElementById('fname').value;
+                let seLect1 = document.getElementById('SelectOne').value;
+                let seLect2 = document.getElementById('SelectTwo').value;
+                if (seLect1 === seLect2){
+                    document.write(giaTriVao);
                 }
-                if (Select1 === 'VIETNAM' && Select2 ==="USA"){
-                    document.write(giatrivao/24000);
+                if (seLect1 === 'VIETNAM' && seLect2 ==="USA"){
+                    document.write(giaTriVao/24000);
                 }
-                if (Select1 === 'USA' && Select2 ==="VIETNAM"){
-                    document.write(giatrivao*24000);
+                if (seLect1 === 'USA' && seLect2 ==="VIETNAM"){
+                    document.write(giaTriVao*24000);
                 }
             }
 

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<br><input type="button" value="Bài 1" onclick="bai_1()">Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị
+hộng thoại thông báo
+<br><input type="button" value="Bài 2" onclick="bai_2()"> Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được
+nhập bởi người truy cập. Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu
+người dùng tăng nhiệt độ.
+<br><input type="button" value="Bài 3" onclick="bai_3()">Hiển thị ra 20 số trong dãy fibonacci đầu tiên.
+<br><input type="button" value="Bài 4" onclick="bai_4()"> Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.
+<br><input type="button" value="Bài 5" onclick="bai_5()">Tính tổng của 20 số đầu tiên trong dãy fibonacci.
+<br><input type="button" value="Bài 6" onclick="bai_6()"> Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự
+nhiên.
+<br><input type="button" value="Bài 7" onclick="bai_7()">Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu
+số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in
+ra chữ "FizzBuzz".
+<br><input type="button" value="Bài 8" onclick="bai_8()"> Game đoán số
+<script>
+    function bai_1() {
+        //Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộng thoại thông báo
+        for (let i = 1; i < 100; i++) {
+            document.write(i + "<br>")
+            if (i == 99) {
+                alert(" chúc mừng")
+            }
+        }
+    }
+
+    function bai_2() {
+        let nhietDo = parseInt(prompt("Mời Bạn nhập nhiệt độ : "));
+        while (nhietDo < 20 || nhietdo > 100) {
+            if (nhietDo < 20) {
+                alert("nhiệt độ quá thấp ");
+                nhietDo = parseInt(prompt("Mời Bạn nhập nhiệt độ : "));
+            } else if (nhietDo > 100) {
+                alert("nhiệt độ quá cao ");
+                nhietDo = parseInt(prompt("Mời Bạn nhập nhiệt độ : "));
+            }
+            nhietDo++
+        }
+        alert("nhiệt độ ok ")
+    }
+
+    function bai_3() {
+        let fn = 0;
+        let fn1 = 1;
+        let fn2 = 1;
+        document.write(fn1);
+        document.write('</br>');
+        document.write(fn2);
+        document.write('</br>');
+        for (let i = 3; i <= 20; i++) {
+            fn = fn1 + fn2;
+
+
+            // cập nhật hoặc gán cho fn1 và fn2
+            fn1 = fn2;
+            fn2 = fn;
+            document.write(fn);
+            document.write('</br>')
+
+
+        }
+    }
+
+    function bai_4() {
+
+        let fn = 0;
+        let fn1 = 1;
+        let fn2 = 1;
+        document.write(fn1);
+        document.write('</br>');
+        document.write(fn2);
+        document.write('</br>');
+        for (let i = 3; i <= 20; i++) {
+            fn = fn1 + fn2;
+            fn1 = fn2;
+            fn2 = fn;
+            document.write(fn);
+            document.write('</br>')
+            if (fn % 5 === 0) {
+                document.write('Số fibolanci đầu tiên chia hết cho 5 là :' + fn);
+                break;
+            }
+        }
+
+    }
+
+    function bai_5() {
+        let fn = 0;
+        let fn1 = 1;
+        let fn2 = 1;
+        let tong = 0;
+        document.write(fn1);
+        document.write('</br>');
+        document.write(fn2);
+        document.write('</br>');
+        for (let i = 3; i <= 20; i++) {
+            fn = fn1 + fn2;
+            fn1 = fn2;
+            fn2 = fn;
+            document.write(fn);
+            document.write('</br>')
+
+
+        }
+        tong = tong + fn;
+        document.write("Tổng 20 số fibolanci đầu tiên là :" + tong)
+    }
+
+    function bai_6() {
+
+        // let tong = 0;
+        // let couts = 0;
+        // for (let i = 1; ; i++) {
+        //     if (i % 7 === 0) {
+        //         tong += i;
+        //         document.write(i + "</br>");
+        //         couts ++ ;
+        //     }
+        //     if (couts === 30){
+        //         break;
+        //     }
+        // }
+        //
+        // document.write("tổng các số chia hết cho 7 là " + tong);
+            let i = 1 ;
+            let tong = 0;
+              let couts = 0;
+            while (true) {
+                if (i % 7 === 0 ){
+                    tong = tong + i ;
+                    couts ++ ;
+
+                    document.write(i +'</br>')
+                }
+                if (couts === 30){
+                    break;
+                }
+                i++;
+
+
+
+            }
+            document.write("tổng các số chia hết cho 7 là " + tong);
+
+    }
+
+    function bai_7() {
+        for (let i = 1; i <= 100; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                document.write(i + " - " + "FizzBuzz");
+                document.write('</br>');
+            } else if (i % 5 === 0) {
+                document.write(i + " - " + "Buzz");
+                document.write('</br>');
+            } else if (i % 3 === 0) {
+                document.write(i + " - " + "Fizz");
+                document.write('</br>');
+            }
+        }
+    }
+
+    function bai_8() {
+        let phamVi = prompt("Mời Bạn nhập phạm vi bạn đoán từ 0 -");
+        let soDoan = prompt("Mời bạn nhập số đoán");
+        let ranDom;
+        if (phamVi) {
+            ranDom = Math.floor(Math.random() * phamVi);
+            if (ranDom === soDoan) {
+                alert("chúc mừng bạn đã đúng !!");
+            } else while (ranDom != soDoan) {
+                alert("bạn sai rồi số đúng là  " + ranDom);
+                soDoan = prompt("Mời bạn nhập số đoán");
+            }
+            alert("Bạn đã đoán đúng");
+        }
+    }
+</script>
+</body>
+</html>

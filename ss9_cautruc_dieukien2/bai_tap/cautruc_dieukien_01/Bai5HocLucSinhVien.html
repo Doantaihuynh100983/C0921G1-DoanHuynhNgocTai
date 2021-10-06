@@ -9,15 +9,15 @@
     let inputDiemBaiKiemTra = prompt("Mời bạn nhập số điểm bài kiểm tra ")
     let inputDiemThiGiuaKi = prompt("Mời bạn nhập số điểm thi giữa kỳ ")
     let inputDiemThiCuoiKi = prompt("Mời bạn nhập số điểm thi cuối kỳ ")
-    let DiemBaiKiemTra = parseInt(inputDiemBaiKiemTra);
-    let DiemThiGiuaKi = parseInt(inputDiemThiGiuaKi);
-    let DiemThiCuoiKi = parseInt(inputDiemThiCuoiKi);
-    let Dtb = (DiemBaiKiemTra +DiemThiGiuaKi+DiemThiCuoiKi)/3
-    if (Dtb >= 9){
+    let diemBaiKiemTra = parseInt(inputDiemBaiKiemTra);
+    let diemThiGiuaKi = parseInt(inputDiemThiGiuaKi);
+    let diemThiCuoiKi = parseInt(inputDiemThiCuoiKi);
+    let dtb = (diemBaiKiemTra +diemThiGiuaKi+diemThiCuoiKi)/3
+    if (dtb >= 9){
         document.write(" Loại A");
-    }else if (9 < Dtb >= 7){
+    }else if (9 < dtb >= 7){
         document.write(" Loại B");
-    }else if ( 7 < Dtb >= 5){
+    }else if ( 7 < dtb >= 5){
         document.write(" Loại C");
     }else {
         document.write(" Loại F");

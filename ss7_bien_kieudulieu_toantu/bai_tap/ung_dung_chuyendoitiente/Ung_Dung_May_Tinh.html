@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form >
+
+    <input id = "Dulieu1"><br><br>
+
+    <input id="Dulieu2"><br><br>
+    <input type="submit" value="Cộng" onclick="Cong()">
+    <input type="submit" value="Trừ" onclick="Tru()">
+    <input type="submit" value="Nhân" onclick="Nhan()">
+    <input type="submit" value="Chia" onclick="Chia()">
+</form>
+
+ <script !src="">
+     function Cong() {
+         let numBerOne = document.getElementById('Dulieu1').value;
+         let numBerTwo = document.getElementById('Dulieu2').value;
+         let numBer1 = parseInt(numBerOne);
+         let numBer2 = parseInt(numBerTwo);
+
+         let sum = numBer1 + numBer2;
+         alert('Tổng 2 Số = ' +sum);
+     }
+     
+     function Tru() {
+         let numBerOne = document.getElementById('Dulieu1').value;
+         let numBerTwo = document.getElementById('Dulieu2').value;
+         let numBer1 = parseInt(numBerOne);
+         let numBer2 = parseInt(numBerTwo);
+
+         let brand = numBer1 - numBer2;
+         alert('Hiệu 2 Số = ' +brand);
+     }
+     
+     function Nhan() {
+         let numBerOne = document.getElementById('Dulieu1').value;
+         let numBerTwo = document.getElementById('Dulieu2').value;
+         let numBer1 = parseInt(numBerOne);
+         let numBer2 = parseInt(numBerTwo);
+
+         let core = numBer1 * numBer2;
+         alert('Nhân 2 Số = ' +core);
+     }
+     function Chia() {
+         let numBerOne = document.getElementById('Dulieu1').value;
+         let numBerTwo = document.getElementById('Dulieu2').value;
+         let numBer1 = parseInt(numBerOne);
+         let numBer2 = parseInt(numBerTwo);
+
+         let core = numBer1 / numBer2;
+         alert('Chia 2 Số = ' +core);
+     }
+
+ </script>
+</body>
+</html>
