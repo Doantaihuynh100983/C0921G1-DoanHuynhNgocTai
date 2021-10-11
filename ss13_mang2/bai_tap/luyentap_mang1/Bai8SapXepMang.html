@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+        let mangSo = [12 , 11 , 23, 26,7,2,12,34,56,9,32];
+        let flag = 0 ;
+        for (let i = 0 ; i < mangSo.length ; i++){
+            for (let j = i + 1 ; j < mangSo.length ; j++){
+                    if (mangSo[i] < mangSo[j]){
+                        flag = mangSo[i];
+                        mangSo[i] = mangSo[j];
+                        mangSo[j] = flag;
+                    }
+            }
+        }
+        for (let i = 0 ; i < mangSo.length ; i++){
+            document.write(mangSo[i] + '</br>');
+        }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    let chuoi = String( prompt("Mời nhập chuỗi Cần kiểm tra"));
+    let nguyenAm = [0];
+    for (let i = 0 ; i < chuoi.length ; i++){
+        if (chuoi[i] === 'A ' || chuoi[i] === 'E' || chuoi[i] === 'I'
+        ||chuoi[i] === 'O' || chuoi[i] === 'U'||chuoi[i] === 'Y'
+            ||  chuoi[i] === 'a' || chuoi[i] === 'e' || chuoi[i] === 'i'
+            ||chuoi[i] === 'o' || chuoi[i] === 'u'||chuoi[i] === 'y'){
+                nguyenAm++;
+        }
+    } document.write("nguyên âm có trong câu là :"+nguyenAm);
+</script>
+</body>
+</html>

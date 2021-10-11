@@ -32,7 +32,7 @@ ra chữ "FizzBuzz".
 
     function bai_2() {
         let nhietDo = parseInt(prompt("Mời Bạn nhập nhiệt độ : "));
-        while (nhietDo < 20 || nhietdo > 100) {
+        while (nhietDo < 20 || nhietDo > 100) {
             if (nhietDo < 20) {
                 alert("nhiệt độ quá thấp ");
                 nhietDo = parseInt(prompt("Mời Bạn nhập nhiệt độ : "));
@@ -40,9 +40,9 @@ ra chữ "FizzBuzz".
                 alert("nhiệt độ quá cao ");
                 nhietDo = parseInt(prompt("Mời Bạn nhập nhiệt độ : "));
             }
-            nhietDo++
+            nhietDo++;
         }
-        alert("nhiệt độ ok ")
+        alert("nhiệt độ ok ");
     }
 
     function bai_3() {
@@ -99,16 +99,16 @@ ra chữ "FizzBuzz".
         document.write('</br>');
         document.write(fn2);
         document.write('</br>');
-        for (let i = 3; i <= 20; i++) {
+        for (let i = 2; i <= 20; i++) {
             fn = fn1 + fn2;
             fn1 = fn2;
             fn2 = fn;
             document.write(fn);
             document.write('</br>')
 
-
+            tong = tong + fn;
         }
-        tong = tong + fn;
+
         document.write("Tổng 20 số fibolanci đầu tiên là :" + tong)
     }
 
@@ -138,7 +138,7 @@ ra chữ "FizzBuzz".
 
                     document.write(i +'</br>')
                 }
-                if (couts === 30){
+                if (couts === 20){
                     break;
                 }
                 i++;

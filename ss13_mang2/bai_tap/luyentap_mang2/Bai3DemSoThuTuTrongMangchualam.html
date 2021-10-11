@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+
+
+   function addArrays() {
+       let soLuong = parseInt(prompt("Mời nhập số lượng phần tử :"));
+       let arrA = [];
+       let arrB = [];
+
+       for (let i = 0; i < soLuong; i++) {
+
+           let nhap = parseInt(prompt("mời nhập phần tử thứ " + i));
+           arrA.push(nhap);
+
+       }
+
+
+     document.write("Mảng bạn nhập vào  ="+arrA + '</br>');
+       document.write("Mảng các số chia hết cho 3 ="+arrB);
+   }
+
+
+
+   addArrays();
+
+
+</script>
+</body>
+</html>

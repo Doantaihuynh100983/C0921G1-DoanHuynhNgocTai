@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    const arrA = [ 1, 2, 4 ,25 ,5, 9, 6 , 12 , 15 , 5];
+    const arrB =[ 200, 2, 5 ,100 ,200, 300, 400 , 500 , 800 , 600];
+
+    const arrC = [211, 244, 544 ,1212 ,2222, 1111, 666 , 888 , 999 , 121212,18, 233, 4444 ,2322 ,5, 9]
+    // let result =arr1.concat(arr2);
+    // document.write(result + "</br>");
+    const result = [];
+    for (let i = 0 ; i < arrC.length ; i++){
+            if (i < 10 ){
+                result.push(arrA[i]);
+                result.push(arrB[i]);
+            }
+                result.push(arrC[i]);
+
+    }
+    document.write( "Mảng C ="+result);
+
+
+
+</script>
+</body>
+</html>

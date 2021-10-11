@@ -7,9 +7,36 @@
 <body>
 <script !src="">
 
+    let numbers = parseInt(prompt("Nhập Số nguyên dương "));
+    if (numbers <= 0) {
+        alert("Hãy Nhập Số nguyên dương");
+        numbers = parseInt(prompt("Nhập Số nguyên dương "));
+    } else {
+        let count = 0;
+        let N = 2;
+        while (1) {
+            let mark = 1;
 
 
+            for (let i = 2; i <= Math.sqrt(N); i++) {
+                if (N % i === 0) {
+                    mark = 0;
+                    break;
+                }
+            }
 
+            if (mark === 1) {
+                count++; // co them 1 so nguyen to
+                document.write(N + '</br>');
+            }
+
+            if (count >= numbers) {
+                break;
+            }
+            N++;
+
+        }
+    }
 
 </script>
 </body>

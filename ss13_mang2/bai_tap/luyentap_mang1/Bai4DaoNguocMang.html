@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script >
+    let arr = [ 1, 2, 4 ,25 ,5, 9, 6 , 12 , 15 , 5, 20];
+   for (let i = 0 ; i < arr.length ; i++){
+       document.write(arr[i] +'</br>');
+   }
+        //dùng hàm cho trước
+   //  arr.reverse();
+   // document.write("đảo ngược "+arr)
+            // mẹo in đảo ngược
+    // for (let i = arr.length -1 ; i >=0 ; i--){
+    //     document.write( +arr[i] +'</br>');
+    // }
+
+
+    // thuật toán in đảo ngược
+    let  bien1 = [0];
+    let doiChieu = arr.length - 1;
+    while (bien1 < doiChieu) {
+        let b = arr[bien1];
+        arr[bien1] = arr[doiChieu];
+        arr[doiChieu] = b;
+        bien1++;
+        doiChieu--;
+    }
+    document.write(arr);
+</script>
+</body>
+</html>
