@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    function dienTich(r) {
+          return r*r*Math.PI;
+    }
+    function chuVi(r) {
+            return 2*r*Math.PI;
+    }
+    let banKinh = parseInt(prompt("Mời nhập bán kính hình tròn"));
+    let  S = dienTich(banKinh);
+    let  C = chuVi(banKinh);
+    document.write("Diện Tích hình tròn có bán kính = " + banKinh + " là = " + Math.round(S) +"</br>");
+    document.write("Chu Vi hình tròn có bán kính = " + banKinh + " là = " +  Math.round(C));
+</script>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" id="id" required>
+<input type="text" id="phone" required>
+
+<input type="button" value="Add" onclick="add()">
+<input type="button" value="view" onclick="View()">
+<p id="hienthi"></p>
+
+
+
+
+
+
+
+
+<script !src="">
+    let data = [];
+
+    function add() {
+
+        let phone = document.getElementById("phone").value;
+        let id = document.getElementById("id").value;
+        let arrays = {
+            phone: phone,
+            id : id
+        }
+        if (!checkPhone(id)){
+            data.push(arrays);
+            view();
+        }
+        else{
+            alert("Đã Có trong danh sách");
+        }
+    }
+    function view() {
+
+        let stringTable = '<table border="1"> <thead> <tr> <th> ID</th> <th> ProDuct Name</th><th> AcTion</th></tr></thead>';
+        for (let i = 0; i < data.length; i++) {
+            stringTable += ' <tr>';
+            stringTable += ' <td>'+ data[i].id+ "</td>";
+            stringTable += ' <td>'+ data[i].phone+ "</td>";
+            stringTable += ' <td> <button onclick="deletePhone('+i+')">DELETE</button></td>';
+            stringTable += ' <td> <button onclick="editPhone('+i+')" > EDIT</button></td>';
+            stringTable += ' </tr>';
+        }
+        stringTable +='</table>';
+        document.getElementById("hienthi").innerHTML =stringTable ;
+    }
+    function deletePhone(id) {
+        data.splice(id,1);
+        view();
+
+
+    }
+
+
+    function checkPhone(id) {
+
+        for (let i = 0 ; i < data.length ; i++){
+            if (data[i].id === id){
+                return true ;
+            }
+        }
+    }
+    
+    
+    function editPhone(id) {
+
+
+    }
+</script>
+</body>
+</html>

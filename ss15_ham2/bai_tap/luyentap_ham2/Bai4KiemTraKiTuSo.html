@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    function kiemTra(n) {
+        for (let i = 0 ; i < n.length ; i++){
+            if (n % 2 === 0 || n % 2 === 1){
+                return true ;
+            }else {
+                return false;
+            }
+
+        }
+    }
+    let chuoi = prompt("Mời nhập chuỗi cần kiểm tra ");
+    let ketQua = kiemTra(chuoi);
+   if (ketQua) {
+       document.write(" Đây Là Một Chuỗi Số");
+   }else {
+       document.write("Không Phải chuỗi số");
+   }
+
+</script>
+</html>

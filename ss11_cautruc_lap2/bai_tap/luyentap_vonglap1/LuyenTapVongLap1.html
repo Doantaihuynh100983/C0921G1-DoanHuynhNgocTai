@@ -46,22 +46,17 @@ ra chữ "FizzBuzz".
     }
 
     function bai_3() {
-        let fn = 0;
-        let fn1 = 1;
+
+        let fn1 = 0;
         let fn2 = 1;
-        document.write(fn1);
-        document.write('</br>');
-        document.write(fn2);
-        document.write('</br>');
-        for (let i = 3; i <= 20; i++) {
-            fn = fn1 + fn2;
-
-
+        for (let i = 0; i <= 20; i++) {
+            document.write(fn1+"</br>");
+          let  fn = fn1 + fn2;
             // cập nhật hoặc gán cho fn1 và fn2
             fn1 = fn2;
             fn2 = fn;
-            document.write(fn);
-            document.write('</br>')
+
+
 
 
         }
@@ -69,19 +64,14 @@ ra chữ "FizzBuzz".
 
     function bai_4() {
 
-        let fn = 0;
-        let fn1 = 1;
+
+        let fn1 = 0;
         let fn2 = 1;
-        document.write(fn1);
-        document.write('</br>');
-        document.write(fn2);
-        document.write('</br>');
-        for (let i = 3; i <= 20; i++) {
-            fn = fn1 + fn2;
+        for (let i = 0; i <= 20; i++) {
+           let fn = fn1 + fn2;
             fn1 = fn2;
             fn2 = fn;
-            document.write(fn);
-            document.write('</br>')
+
             if (fn % 5 === 0) {
                 document.write('Số fibolanci đầu tiên chia hết cho 5 là :' + fn);
                 break;
@@ -91,24 +81,19 @@ ra chữ "FizzBuzz".
     }
 
     function bai_5() {
-        let fn = 0;
-        let fn1 = 1;
+
+        let fn1 = 0;
         let fn2 = 1;
         let tong = 0;
-        document.write(fn1);
-        document.write('</br>');
-        document.write(fn2);
-        document.write('</br>');
-        for (let i = 2; i <= 20; i++) {
-            fn = fn1 + fn2;
+
+        for (let i = 0; i <= 20; i++) {
+            document.write(fn1);
+            document.write('</br>')
+            tong = tong + fn1;
+            let fn = fn1 + fn2;
             fn1 = fn2;
             fn2 = fn;
-            document.write(fn);
-            document.write('</br>')
-
-            tong = tong + fn;
         }
-
         document.write("Tổng 20 số fibolanci đầu tiên là :" + tong)
     }
 

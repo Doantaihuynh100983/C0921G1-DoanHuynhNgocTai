@@ -11,18 +11,28 @@
 
 
      let v = parseInt(prompt("mời nhập số cần tìm"));
-     let arr = [ 1, 2, 4 ,25 ,5, 9, 6 , 12 , 15 , 5,5, 20];
+     let arr = [ 1, 2, 15 , 4 , 25 , 9, 6 , 12 , 15 , 5 , 5,  20 ,15 , 5];
 
      for (let i = 0 ; i < arr.length ; i++){
-             if (v === arr[i]){
+             if (v === arr[i] ){
                  for (let j = i ; j< arr.length-1 ;j++){
                      arr[j] = arr[j + 1];
                  }
                   arr[arr.length-1] = 0;
 
              }
+
+
      }
      document.write(arr);
+
+
+
+
+
+
+
+
 
      // for (let i = 0 ; i < arr.length ; i++){
      //     if (v === arr[i]){

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    function min(array) {
+            let flag ;
+            for (let i = 0 ; i < array.length ; i++){
+                flag = array[0];
+                if (array[i]< flag){
+                    flag = array[i];
+                }
+            }
+            return flag ;
+    }
+    function kiemTra() {
+        let arr = []
+        for (let i = 0 ; i < 3 ; i++){
+                arr.push(parseInt(prompt("Mời nhập phần tử thứ "+i)));
+
+        }
+        let timSo = min(arr);
+        document.write("Mảng Của Tôi = "+ arr + "</br>");
+        document.write("Số nhỏ nhất trong mảng là "+ timSo);
+    }
+
+
+
+
+    kiemTra();
+</script>
+</html>
