@@ -41,7 +41,7 @@
     }
     function view() {
 
-        let stringTable = '<table border="1"> <thead> <tr> <th> ID</th> <th> ProDuct Name</th><th> AcTion</th></tr></thead>';
+        let stringTable = '<table border="1"> <thead> <tr> <th> ID</th> <th> ProDuct Name</th><th style="text-align: center"> AcTion</th></tr></thead>';
         for (let i = 0; i < data.length; i++) {
             stringTable += ' <tr>';
             stringTable += ' <td>'+ data[i].id+ "</td>";
