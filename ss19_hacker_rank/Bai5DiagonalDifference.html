@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    let arr = [
+        [1,2,3],
+        [4,5,6],
+        [9,8,9]
+    ]
+    let sumCheoChinh = 0 ;
+    let sumCheoPhu = 0;
+    let hieuDuongCheo = 0;
+    for(let i = 0 ; i < arr.length ; i++){
+        for (let j = 0 ; j < arr.length ; j++){
+           if (i === j){
+               sumCheoChinh+= arr[i][j];
+           }
+           if (i+j === arr.length-1){
+               sumCheoPhu+=arr[i][j];
+           }
+        }
+    }
+        hieuDuongCheo = sumCheoChinh - sumCheoPhu;
+    document.write("Tổng đường chéo chính = "+sumCheoChinh +"</br>");
+    document.write("Tổng đường chéo phụ = "+sumCheoPhu+"</br>");
+    document.write("Hiệu của hai đường chéo = "+hieuDuongCheo+"</br>");
+
+
+
+
+
+</script>
+</html>

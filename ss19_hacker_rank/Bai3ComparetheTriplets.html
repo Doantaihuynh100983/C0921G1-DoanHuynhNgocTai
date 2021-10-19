@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+
+
+
+    function compareTriplets(Alice, Bob) {
+        let point = [0, 0]
+        Alice = [100 ,90, 3];
+        Bob = [50 ,400, 4];
+        if (Alice[0] > Bob[0]){
+            point[0]++;
+        }
+        if (Alice[0] < Bob[0])
+        {
+            point[1]++;
+        }
+
+        if (Alice[1] > Bob[1]) {
+            point[0]++;
+        }
+        if (Alice[1] < Bob[1]){
+            point[1]++;
+        }
+
+        if (Alice[2] > Bob[2]){
+            point[0]++;
+        }
+        if (Alice[2] < Bob[2]){
+            point[1]++;
+        }
+        return document.write("Số điểm của Alice và Bob là :" +point);
+    }
+
+    compareTriplets();
+
+
+</script>
+</html>

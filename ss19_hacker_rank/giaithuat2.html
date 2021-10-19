@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function timSoLonThu2TrongMang(arr) {
+        let max = arr[0];
+        let result = arr[0];
+        for (let i=0; i<arr.length; i++){
+            if (arr[i] > max ){
+                max = arr[i];
+            }
+        }
+        for (let j=0; j<arr.length; j++){
+            if (arr[j]>result && arr[j] < max){
+                result = arr[j];
+            }
+        }
+        document.write("Kết quả " +result);
+    }
+    let array1 = [1,5,33,4,2,33,9,7,1,0,9,-10];
+    let array2 = [1,5,4,2,0];
+    document.write(array1 + "<br>");
+    timSoLonThu2TrongMang(array1);
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    class temPeRature{
+        constructor(C) {
+            this.C = C ;
+        }
+        getC(){
+            return this.C;
+        }
+        setC(C){
+            this.C = C ;
+        }
+        changeF(C){
+            return (C - 32)/1.8;
+        }
+        changeK(C){
+            return  C+ 273.15;
+        }
+
+    }
+
+    let change = new temPeRature();
+    let doC = change.getC();
+    let F = change.changeF(doC);
+    alert(doC+" = Chuyển sang nhiệt độ F =" + F);
+    let K = change.changeK(doC);
+    alert(doC + " =  khi chuyển qua nhiệt độ K = "+K);
+</script>
+</html>

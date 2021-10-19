@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+        let arr = [];
+        let sum =0 ;
+        let n = parseInt(prompt("Mời nhập kích thước mảng")) ;
+
+
+         function nhapMang() {
+             for (let i = 0 ; i < n ; i++){
+                 let nhap = parseInt(prompt("mời nhập phần tử thứ "+ (i +1)));
+                 arr.push(nhap);
+             }
+         }   
+
+        function tongMang() {
+            for (let i = 0 ; i < arr.length ; i++){
+                if (arr[i] < 1000){
+                    sum += arr[i];
+                }
+
+            }
+        }
+
+
+        nhapMang();
+        tongMang();
+        document.write("Kích thước mảng = " + n +"</br>");
+        document.write("Mảng =" + arr+"</br>");
+        document.write("Tổng Mảng = "+ sum+"</br>");
+</script>
+</html>

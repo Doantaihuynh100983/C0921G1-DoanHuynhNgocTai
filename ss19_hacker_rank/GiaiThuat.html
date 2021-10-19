@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    // let mangSo = [12 , 55, 23, 26,7,2,12,34,56,9,32];
+    // let flag = 0 ;
+    // for (let i = 0 ; i < mangSo.length ; i++){
+    //     for (let j = i + 1 ; j < mangSo.length ; j++){
+    //         if (mangSo[i] < mangSo[j]){
+    //             flag = mangSo[i];
+    //             mangSo[i] = mangSo[j];
+    //             mangSo[j] = flag;
+    //         }
+    //     }
+    // }
+    // for (let i = 0 ; i < mangSo.length ; i++){
+    //     document.write(mangSo[i] + '</br>');
+    //
+    // }
+    // document.write( "Số Lớn thứ hai trong mảng là "+ mangSo[1]);
+
+    // let mangSo = [120 , 120, 45, 67,68,2,12,67,56,68,67];
+    // let flag = 0 ;
+    // function sapXep() {
+    //     for (let i = 0 ; i < mangSo.length ; i++){
+    //         for (let j = i + 1 ; j < mangSo.length ; j++){
+    //             if (mangSo[i] < mangSo[j]){
+    //                 flag = mangSo[i];
+    //                 mangSo[i] = mangSo[j];
+    //                 mangSo[j] = flag;
+    //             }
+    //         }
+    //     }
+    //     for (let i = 0 ; i < mangSo.length ; i++){
+    //         document.write(mangSo[i] + '</br>');
+    //
+    //     }
+    // }
+   let mangSo = [120 , 120, 45, 67,68,2,12,67,56,68,67];
+    function findSecontMax(){
+
+        let max = 0;
+        let max_2 = 0;
+
+        for(let i =0 ; i< mangSo.length; i++){
+            if(mangSo[i]>max)
+                max = mangSo[i];
+        }
+
+        for(let i=0; i< mangSo.length; i++){
+            if (mangSo[i]===max){
+                continue;
+            }else{
+                if(mangSo[i]>max_2){
+                    max_2 = mangSo[i];
+                }
+            }
+        }
+        return document.write("Phần tử lớn thứ 2 trong mảng"+max_2);
+
+    }
+
+    // sapXep();
+    document.write(mangSo +"<br>");
+    findSecontMax()
+</script>
+</html>

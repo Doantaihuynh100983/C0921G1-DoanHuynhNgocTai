@@ -16,39 +16,43 @@
 
         this.year = year;
 
-    };
-    this.getDay = function() {
-        return this.day;
-    }
-    this.getMonth = function() {
-        return this.month;
-    }
-    this.getYear = function() {
-        return this.year;
-    }
+        this.getDay = function() {
+            return this.day;
+        }
+        this.getMonth = function() {
+            return this.month;
+        }
+        this.getYear = function() {
+            return this.year;
+        }
 
-    this.setDay = function(day) {
-        this.day  = day;
+        this.setDay = (day) => {
+            this.day  = day;
+        }
+        this.setMonth = (month) => {
+            this.month  = month;
+        }
+        this.setYear = (year) => {
+            this.year  = year;
+        }
+
+
+        this.toSting = () => {
+            return this.day + "/" + this.month + "/" + this.year;
+        }
     }
-    this.setMonth = function(month) {
-        this.month  = month;
-    }
-    this.setYear = function(year) {
-        this.year  = year;
-    }
-    let date = new MyDate(2, 2, 2007);
+    let date = new MyDate(3, 2, 2007);
     let day = date.getDay(); // 2
-
     let month = date.getMonth(); // 2
-
     let year = date.getYear(); // 2007
-    alert(day + "/" + month + "/" + year);
+
+    alert(date.toSting());
 
     date.setDay(10);
     date.setMonth(10);
     date.setYear(2019);
 
-    alert(day + "/" + month + "/" + year);
+    alert(date.toSting());
 
 </script>
 </html>
