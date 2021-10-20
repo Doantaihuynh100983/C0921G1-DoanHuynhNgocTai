@@ -7,51 +7,42 @@
 <body>
 
 </body>
-<script !src="">
-        class SwitchButton{
-            constructor(status , lamp) {
-                this.status = status ;
-                this.lamp = lamp ;
-            }
-            getStatus(){
-                    return this.status;
-            }
-            setStatus(status){
-                 this.status = status ;
-            }
-            getLamp(){
-                return this.lamp;
-            }
-            setLamp(lamp){
-                this.lamp = lamp ;
-            }
-            connectToLamp(){
-
-            }
-
-            switchOff(){
-
-            }
-
-            switchOn(){
-
-            }
+<script>
+    class ElectricLamp{
+        constructor(status) {
+            this.status = status;
         }
-
-
-
-        class ElectricLamp {
-            constructor(status) {
-                this.status = status;
-            }
-            turnOff(){
-
-            }
-            turnOn(){
-
-            }
-
-
+        turnOn(){
+            this.status = true;
+            console.log("Dền đang sáng");
         }
-</script>
-</html>
+        turnOff(){
+            this.status = false;
+            console.log("Đèn đang tắt");
+        }
+    }
+    class SwitchButton{
+        constructor(status, lamp) {
+            this.status = status;
+            this.lamp =lamp;
+        }
+        connectToLamp(lamp){
+            this.lamp = lamp;
+        }
+        switchOn(){
+            this.status = true;
+            this.lamp.turnOn();
+        }
+        switchOff(){
+            this.status = false;
+            this.lamp.turnOff();
+        }
+    }
+    let bedroomLamp = new ElectricLamp();
+    let switchLamp = new SwitchButton();
+    switchLamp.connectToLamp(bedroomLamp);
+    switchLamp.switchOn();
+    switchLamp.switchOff();
+    switchLamp.switchOn();
+    switchLamp.switchOff();
+</script>html>

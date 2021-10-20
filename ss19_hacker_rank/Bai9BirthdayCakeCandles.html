@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+
+    let candles=[3 ,2 ,1 ,3, 7 , 7 , 7,7  ];
+    let max = candles[0];
+    let vtmax =0 ;
+
+    for (let i = 0 ; i < candles.length ; i++){
+        if (max < candles[i]){
+            max = candles[i];
+
+        }
+
+    }
+    for (let i = 0 ; i < candles.length ; i++){
+            if (max === candles[i]){
+                vtmax++;
+            }
+    }
+    document.write(" số lớn nhật trong mảng "+max +"</br>");
+    document.write(" có " +vtmax + " số " + max + " trong mảng ");
+
+
+</script>
+</html>
