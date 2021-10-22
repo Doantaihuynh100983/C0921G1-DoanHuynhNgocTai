@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+
+ function kangaroo(x1, v1, x2, v2) {
+
+     if(x1 > x2){
+         if(v1>v2){
+             return document.write("NO");
+         }
+         else if((x1- x2) %(v2 - v1)===0){
+             return document.write("YES");
+         }else{
+             return document.write("NO");
+         }
+
+     }else {
+         if(v1<v2){
+             return document.write("NO");
+         }
+         else if((x2- x1) %(v1 - v2)===0){
+             return document.write("YES");
+         }else{
+             return document.write("NO");
+         }
+
+     }
+ }
+ let x1 = parseInt(prompt("x1")) ;
+ let v1 =  parseInt(prompt("v1")) ;
+ let x2 =  parseInt(prompt("x2")) ;
+ let v2 =  parseInt(prompt("v2")) ;
+ kangaroo(x1,v1,x2,v2);
+</script>
+</html>

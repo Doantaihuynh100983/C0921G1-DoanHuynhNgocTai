@@ -9,7 +9,25 @@
 </body>
 <script !src="">
 
-
+    let s = 7 ;
+    let t = 10;
+    let a = 4 ;
+    let b = 12 ;
+    let apples = [2, 3 ,-4];
+    let oranges = [3, -2 , -4];
+    let count = [0 , 0];
+    for (let i = 0 ; i < apples.length ; i++){
+        if (a+apples[i]>=s && a+apples[i]<=t){
+            count[0]++;
+        }
+    }
+    for (let i = 0 ; i < oranges.length ; i++){
+        if (b+oranges[i]>=s && b+oranges[i]<=t){
+            count[1]++;
+        }
+    }
+    document.write(count[0] +"</br>");
+    document.write( count[1] );
 
 
 
