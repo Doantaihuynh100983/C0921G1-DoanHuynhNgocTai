@@ -213,6 +213,11 @@ Với m, n là các số nhập từ bàn phím.
         alert(vt);
 
 
+
+
+
+
+
     }
 
     function bai_10() {
@@ -277,14 +282,33 @@ Với m, n là các số nhập từ bàn phím.
         document.write(sentence.join(' '));
     }
 
-    function bai_13() {
 
+
+    function bai_13() {
+        let string = prompt("Nhập vào 1 xấu ký tự");
+        let result = "";
+        for (let i=0;i<string.length; i++){
+            if (string.indexOf(string[i])===i){
+                result+=string[i];
+            }
+        }
+        alert("xâu có "+result.length+" ký tự khác nhau");
 
 
     }
 
     function bai_14() {
-
+        let stringA = prompt("Nhập vào xâu thứ nhất:");
+        let stringB = prompt("Nhập vào xâu thứ hai:");
+        let result="";
+        for (let i=0; i<stringA.length; i++){
+            if (stringB.indexOf(stringA[i])!==-1){
+                result+=stringA[i];
+                stringB = stringB.slice(0,stringB.indexOf(stringA[i]))+stringB.slice(stringB.indexOf(stringA[i])+1,stringB.length);
+            }
+        }
+        alert("2 xâu có số ký tự chung là "+result.length);
+        alert(result)
 
     }
 
@@ -332,7 +356,8 @@ Với m, n là các số nhập từ bàn phím.
                 return false;
             }
             for (let i = 2; i <= Math.sqrt(a); i++) {
-                if (a % i === 0) return false;
+                if (a % i === 0)
+                    return false;
             }
             return true;
         }
