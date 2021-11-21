@@ -147,8 +147,8 @@ Với m, n là các số nhập từ bàn phím.
 
     function bai_6() {
         let chuoi = String(prompt("Mời nhập chuỗi Cần kiểm tra"));
-        let nguyenAm = [0];
-        let phuAm = [0];
+        let nguyenAm = 0;
+        let phuAm = 0;
 
         for (let i = 0; i < chuoi.length; i++) {
             if (chuoi[i] === 'o' || chuoi[i] === 'u' || chuoi[i] === 'i' || chuoi[i] === 'a' || chuoi[i] === 'e'
@@ -193,6 +193,7 @@ Với m, n là các số nhập từ bàn phím.
         for (let i = 0; i < B.length; i++) {
             if (A.indexOf(B[i]) === -1 && equal.indexOf(B[i]) === -1) {
                 equal.push(B[i]);
+
             }
         }
         alert(equal);
@@ -200,9 +201,10 @@ Với m, n là các số nhập từ bàn phím.
 
 
     function bai_9() {
+
         let numerators = [5, 2, 5];
         let denominators = [6, 3, 4];
-        let max = numerators[0] / denominators[0];
+        let max = numerators[0] / denominators[0] ;
         let vt = 0;
         for (let i = 0; i < numerators.length; i++) {
             if (max < numerators[i] / denominators[i]) {
@@ -226,10 +228,10 @@ Với m, n là các số nhập từ bàn phím.
         for (let i = 0; i < number.length; i++) {
             switch (number[i]) {
                 case '0':
-                    result += "không ";
+                    result += "không";
                     break;
                 case '1':
-                    result += "một ";
+                    result += "một";
                     break;
                 case '2':
                     result += "hai ";
@@ -297,18 +299,10 @@ Với m, n là các số nhập từ bàn phím.
 
     }
 
+
+
     function bai_14() {
-        let stringA = prompt("Nhập vào xâu thứ nhất:");
-        let stringB = prompt("Nhập vào xâu thứ hai:");
-        let result="";
-        for (let i=0; i<stringA.length; i++){
-            if (stringB.indexOf(stringA[i])!==-1){
-                result+=stringA[i];
-                stringB = stringB.slice(0,stringB.indexOf(stringA[i]))+stringB.slice(stringB.indexOf(stringA[i])+1,stringB.length);
-            }
-        }
-        alert("2 xâu có số ký tự chung là "+result.length);
-        alert(result)
+        
 
     }
 
@@ -351,18 +345,16 @@ Với m, n là các số nhập từ bàn phím.
 
 
     function bai_16() {
-        function kiemTraSnt(a) {
-            if (a < 2) {
+        function kiemTraSnt(snt) {
+            if (snt <= 2) {
                 return false;
             }
-            for (let i = 2; i <= Math.sqrt(a); i++) {
-                if (a % i === 0)
+            for (let i = 2; i <= Math.sqrt(snt); i++) {
+                if (snt % i === 0)
                     return false;
             }
             return true;
         }
-
-
 
             let arr = addMang2Chieu();
             let snt = '' ;
@@ -383,12 +375,11 @@ Với m, n là các số nhập từ bàn phím.
 
 
     }
-    
-    
+
     function bai_17() {
             let arr = addMang2Chieu();
             let max = arr[0][0];
-            let min = arr[0][0]
+            let min = arr[0][0];
             for (let i = 0 ; i < arr.length ; i++){
                 for (let j = 0 ; j < arr[i].length ; j++){
                     if (max < arr[i][j]){

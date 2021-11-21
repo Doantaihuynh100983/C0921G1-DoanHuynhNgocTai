@@ -5,77 +5,195 @@
     <title>Title</title>
 </head>
 <body>
+<table>
+    <div class="employee-form">
+        <div>
+            <label>ID</label>
+            <input type="text" name="city" id="id" >
+        </div>
+        <div>
+            <label>Full Name*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+            <input type="text" name="fullName" id="fullName" >
+        </div>
+        <div>
+            <label>Email Id</label>
+            <input type="text" name="email" id="email" >
+        </div>
+        <div>
+            <label>Salary</label>
+            <input type="text" name="salary" id="salary" >
+        </div>
+        <div>
+            <label>City</label>
+            <input type="text" name="city" id="city">
+        </div>
+        <div  class="form-action-buttons">
+            <input type="submit" value="Submit" onclick="addData()" >
+            <input type="submit" value="RESET" onclick="resetFrom()">
+        </div>
 
-<input type="text" id="id" required>
-<input type="text" id="phone" required>
 
-<input type="button" value="Add" onclick="add()">
-<input type="button" value="view" onclick="View()">
-<p id="hienthi"></p>
+    </div>
 
+    <br/>
+    <div class = "employees-table">
+        <p id="hienthi"></p>
+    </div>
+</table>
 
-
-
-
-
+<script>
 
 
-<script !src="">
-    let data = [];
-
-    function add() {
-
-        let phone = document.getElementById("phone").value;
-        let id = document.getElementById("id").value;
-        let arrays = {
-            phone: phone,
-            id : id
+    //Bai 3
+    class SavingBook {
+        constructor(maso, loai, hoten, cmnd, ngaymo, sotien) {
+            this.regnum = maso;
+            this.type = loai;
+            this.name = hoten;
+            this.id = cmnd;
+            this.date = ngaymo;
+            this.amount = sotien;
         }
-        if (!checkPhone(id)){
-            data.push(arrays);
-            view();
+
+        getRegnum() {
+            return this.regnum;
         }
-        else{
-            alert("Đã Có trong danh sách");
+
+        getType() {
+            return this.type;
         }
-    }
-    function view() {
 
-        let stringTable = '<table border="1"> <thead> <tr> <th> ID</th> <th> ProDuct Name</th>' +
-            '<th style="text-align: center"> AcTion</th></tr></thead>';
-        for (let i = 0; i < data.length; i++) {
-            stringTable += ' <tr>';
-            stringTable += ' <td>'+ data[i].id+ "</td>";
-            stringTable += ' <td>'+ data[i].phone+ "</td>";
-            stringTable += ' <td> <button onclick="deletePhone('+i+')">DELETE</button></td>';
-            stringTable += ' <td> <button onclick="editPhone('+i+')" > EDIT</button></td>';
-            stringTable += ' </tr>';
+        getName() {
+            return this.name;
         }
-        stringTable +='</table>';
-        document.getElementById("hienthi").innerHTML =stringTable ;
-    }
-    function deletePhone(id) {
-        data.splice(id,1);
-        view();
 
-
-    }
-
-
-    function checkPhone(id) {
-
-        for (let i = 0 ; i < data.length ; i++){
-            if (data[i].id === id){
-                return true ;
-            }
+        getId() {
+            return this.id;
         }
+
+        getDate() {
+            return this.date;
+        }
+
+        getAmount() {
+            return this.amount;
+        }
+
+        setRegnum(regnum) {
+            this.regnum = regnum;
+        }
+
+        setType(type) {
+            this.type = type;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setId(id) {
+            this.id = id;
+        }
+
+        setDate(date) {
+            this.date = date;
+        }
+
+        setAmount(amount) {
+            this.amount = amount;
+        }
+
     }
-    
-    
-    function editPhone(id) {
+
+    function addSavingBook() {
+        let newRegnum = document.getElementById('maso').value;
+        let newType = document.getElementById('loai').value;
+        let newName = document.getElementById('hoten').value;
+        let newId = document.getElementById('cmnd').value;
+        let newDate = document.getElementById('ngaymo').value;
+        let newAmount = document.getElementById('sotien').value;
+
+        let newBook = new SavingBook(newRegnum, newType, newName, newId, newDate, newAmount);
+        savingBook.push(newBook);
+        display(savingBook);
+        resetSavingBook()
+    }
+    function updateSavingBook() {
+        let id=document.getElementById('id').value
+        savingBook[id].setRegnum(document.getElementById('maso').value);
+        savingBook[id].setType(document.getElementById('loai').value);
+        savingBook[id].setName(document.getElementById('hoten').value);
+        savingBook[id].setId(document.getElementById('cmnd').value);
+        savingBook[id].setDate(document.getElementById('ngaymo').value);
+        savingBook[id].setAmount(document.getElementById('sotien').value);
+
+        display(savingBook);
 
 
     }
+
+    function resetSavingBook() {
+        document.getElementById('maso').value='';
+        document.getElementById('loai').value='';
+        document.getElementById('hoten').value='';
+        document.getElementById('cmnd').value='';
+        document.getElementById('ngaymo').value='';
+        document.getElementById('sotien').value='';
+    }
+
+    function deleteSavingBook(index) {
+        savingBook.splice(index, 1);
+        display(savingBook);
+    }
+
+    function editSavingBook(index) {
+        document.getElementById('id').value = index;
+        document.getElementById('maso').value=savingBook[index].getRegnum();
+        document.getElementById('loai').value=savingBook[index].getType();
+        document.getElementById('hoten').value=savingBook[index].getName();
+        document.getElementById('cmnd').value=savingBook[index].getId();
+        document.getElementById('ngaymo').value=savingBook[index].getDate();
+        document.getElementById('sotien').value=savingBook[index].getAmount();
+
+
+
+    }
+
+    function display(arraySavingBook) {
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>Mã số</th>\n' +
+            '        <th>Loại tiết kiệm</th>\n' +
+            '        <th>Họ và tên</th>\n' +
+            '        <th>Chứng minh thư</th>\n' +
+            '        <th>Ngày gửi</th>\n' +
+            '        <th>Số tiền gửi</th>\n' +
+            '    </tr>';
+
+        for (let i = 0; i < savingBook.length; i++) {
+            tableString += '<tr>\n' +
+                '       <td>' + savingBook[i].getRegnum() + '</td>\n' +
+                '       <td>' + savingBook[i].getType() + '</td>\n' +
+                '       <td>' + savingBook[i].getName() + '</td>\n' +
+                '       <td>' + savingBook[i].getId() + '</td>\n' +
+                '       <td>' + savingBook[i].getDate() + '</td>\n' +
+                '       <td>' + savingBook[i].getAmount() + '</td>\n' +
+                '       <td><input type="button" value="Edit" onclick="editSavingBook(' + i + ')"></td>\n' +
+                '       <td><input type="button" value="Delete" onclick="deleteSavingBook(' + i + ')"></td>\n' +
+                '    </tr>';
+        }
+        tableString += '</table>';
+        document.getElementById("ketQua").innerHTML = tableString;
+    }
+
+    let savingBook = [];
+    let worker1 = new SavingBook("Chanh1",18,1000);
+    let worker2 = new SavingBook("Chanh2",18,1000);
+    let worker3 = new SavingBook("Chanh3",18,1000);
+    savingBook.push(worker1);
+    savingBook.push(worker2);
+    savingBook.push(worker3);
+    display();
 </script>
 </body>
 </html>

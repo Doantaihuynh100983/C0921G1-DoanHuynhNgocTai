@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+<div style="text-align: center">
 <h1>Menu</h1>
 <h3>1.Cafe</h3>
 <h3>2.Cam vắt</h3>
@@ -13,6 +14,7 @@
 <h3>5.Nước lọc</h3>
 <h3>6.Nước dừa</h3>
 <h3>7.Thoát </h3>
+</div>
 <h3><input type="button" value="Chọn Nước Tại Đây" onclick="choMenu()">  </br></h3>
 
 <p id="bill"></p>
@@ -29,14 +31,15 @@
         do {
             numBer = parseInt(prompt("Mời chọn món bạn ơi"));
             if (numBer >= 1 && numBer <=6){
-                alert(menu[numBer - 1 ] +" Có Giá "+ giaTien[numBer -1]);
+                alert(menu[numBer - 1 ] +"Có Giá "+ giaTien[numBer-1]);
                 soLuong = parseInt(prompt("Uống Bao nhiêu Ly ??"));
                 tongTien1Mon = giaTien[numBer -1]* soLuong;
                 tongMenuPhaiThanhToan += tongTien1Mon;
             }
 
 
-        }while (numBer!==7);
+          }while (numBer!==7);
+
 
 
     document.getElementById("bill").innerHTML = "Tổng hóa đơn bạn cần thanh tóan"+tongMenuPhaiThanhToan;
